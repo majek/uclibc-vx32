@@ -21,7 +21,9 @@
 #include <sys/syscall.h>
 
 /* This must be initialized data because commons can't have aliases.  */
-void *__curbrk attribute_hidden = 0;
+extern void end;
+
+void * __curbrk attribute_hidden = &end;
 
 int brk(void *addr)
 {
