@@ -14,7 +14,6 @@
 *.depend
 lib/
 install_dir/
-.config*
 .*.dep
 /*.log
 cscope.*
@@ -35,3 +34,4 @@ core
 *.rej
 /*.patch
 /*.diff
+.config.old
