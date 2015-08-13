@@ -21,9 +21,9 @@
 #include <sys/syscall.h>
 
 .text
-.global mmap
-.type   mmap,%function
-mmap:
+.global xmmap
+.type   xmmap,%function
+xmmap:
 
 	/* Save registers.  */
 	movl %ebx, %edx
@@ -45,6 +45,6 @@ mmap:
 	/* Successful; return the syscall's value.  */
 	ret
 
-.size mmap,.-mmap
+.size xmmap,.-xmmap
 
-libc_hidden_def(mmap)
+libc_hidden_def(xmmap)

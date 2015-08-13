@@ -36,10 +36,10 @@
 #define OFFHI	OFFLO+4
 
 .text
-.global mmap64
-.type   mmap64,%function
+.global xmmap64
+.type   xmmap64,%function
 
-mmap64:
+xmmap64:
 	/* Save registers.  */
 	pushl %ebp
 	pushl %ebx
@@ -86,6 +86,6 @@ L_einval:
 	movl $-EINVAL, %eax
 	jmp __syscall_error
 
-.size mmap64,.-mmap64
+.size xmmap64,.-xmmap64
 
 #endif
