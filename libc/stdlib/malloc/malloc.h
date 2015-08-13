@@ -50,6 +50,7 @@
 #ifdef __ARCH_USE_MMU__
 # define MALLOC_USE_SBRK
 #endif
+#define MALLOC_USE_SBRK
 
 
 /* The current implementation of munmap in uClinux doesn't work correctly:
