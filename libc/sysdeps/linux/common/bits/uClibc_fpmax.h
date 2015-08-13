@@ -17,7 +17,7 @@
 
 #ifdef __UCLIBC_HAS_FLOATS__
 
-#if defined(LDBL_MANT_DIG)
+#if 0
 
 typedef long double __fpmax_t;
 #define FPMAX_TYPE           3
@@ -32,7 +32,7 @@ typedef long double __fpmax_t;
 #define FPMAX_MAX            LDBL_MAX
 #define FPMAX_MAX_10_EXP     LDBL_MAX_10_EXP
 
-#elif defined(DBL_MANT_DIG)
+#elif defined(LDBL_MANT_DIG) || defined(DBL_MANT_DIG)
 
 typedef double __fpmax_t;
 #define FPMAX_TYPE           2

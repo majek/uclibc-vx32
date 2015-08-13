@@ -1562,8 +1562,8 @@ static int _do_one_spec(FILE * __restrict stream,
 			nf = _fpmaxtostr(stream,
 							 (__fpmax_t)
 							 (PRINT_INFO_FLAG_VAL(&(ppfs->info),is_long_double)
-							  ? *(long double *) *argptr
-							  : (long double) (* (double *) *argptr)),
+							  ? *(double *) *argptr
+							  : (double) (* (double *) *argptr)),
 							 &ppfs->info, FP_OUT );
 			if (nf < 0) {
 				return -1;

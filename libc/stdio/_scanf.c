@@ -2222,7 +2222,7 @@ int attribute_hidden __psfs_do_numeric(psfs_t *psfs, struct scan_cookie *sc)
 		assert(!*e);
 		if (psfs->store) {
 			if (psfs->dataargtype & PA_FLAG_LONG_LONG) {
-				*((long double *)psfs->cur_ptr) = (long double) x;
+				*((double *)psfs->cur_ptr) = (double) x;
 			} else if (psfs->dataargtype & PA_FLAG_LONG) {
 				*((double *)psfs->cur_ptr) = (double) x;
 			} else {
